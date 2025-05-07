@@ -87,13 +87,13 @@
       });
 
       watchEffect(async () => {
-        props.immediate && await fetch();
+        props.immediate && (await fetch());
       });
 
       watch(
         () => props.params,
         async () => {
-          unref(isFirstLoad) && await fetch();
+          unref(isFirstLoad) && (await fetch());
         },
         { deep: true },
       );

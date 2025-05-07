@@ -1,5 +1,5 @@
 import type { RouteMeta } from 'vue-router';
-import type { AppRouteRecordRaw } from "/@/router/types";
+import type { AppRouteRecordRaw } from '/@/router/types';
 export interface RouteItem {
   path: string;
   component: any;

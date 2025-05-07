@@ -1,10 +1,5 @@
 <template>
-  <PageWrapper
-    contentClass="flex"
-    dense
-    fixedHeight
-    title="为lamp-cloud或lamp-boot项目新建新服务"
-  >
+  <PageWrapper contentClass="flex" dense fixedHeight title="为lamp-cloud或lamp-boot项目新建新服务">
     <div class="bg-white md:w-2/3 m-4 p-4 mr-2 overflow-hidden">
       <BasicForm @register="registerForm" />
       <div class="flex justify-center">

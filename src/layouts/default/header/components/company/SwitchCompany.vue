@@ -114,7 +114,6 @@
         return name;
       }
 
-
       async function switchCompany() {
         const userInfo = await userStore.switchTenantAndOrg(formData.orgId as unknown as string);
         if (userInfo) {

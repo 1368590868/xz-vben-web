@@ -21,21 +21,9 @@
             :text="t('layout.header.dropdownProfile')"
             icon="ant-design:user-outlined"
           />
-          <MenuItem
-            key="vben5demo"
-            text="体验网址-vben5版"
-            icon="ant-design:global-outlined"
-          />
-          <MenuItem
-            key="vben2demo"
-            text="体验网址-vben2版"
-            icon="ant-design:global-outlined"
-          />
-          <MenuItem
-            key="soybeandemo"
-            text="体验网址-soybean版"
-            icon="ant-design:global-outlined"
-          />
+          <MenuItem key="vben5demo" text="体验网址-vben5版" icon="ant-design:global-outlined" />
+          <MenuItem key="vben2demo" text="体验网址-vben2版" icon="ant-design:global-outlined" />
+          <MenuItem key="soybeandemo" text="体验网址-soybean版" icon="ant-design:global-outlined" />
           <MenuDivider v-if="getShowDoc" />
           <MenuItem
             v-if="getShowDoc"
@@ -90,7 +78,16 @@
 
   import { createAsyncComponent } from '/@/utils/factory/createAsyncComponent';
 
-  type MenuEvent = 'logout' | 'doc' | 'lock' | 'soybeandemo' | 'vben2demo' | 'vben5demo' | 'profile' | 'vbenDoc' | 'registerTenant';
+  type MenuEvent =
+    | 'logout'
+    | 'doc'
+    | 'lock'
+    | 'soybeandemo'
+    | 'vben2demo'
+    | 'vben5demo'
+    | 'profile'
+    | 'vbenDoc'
+    | 'registerTenant';
 
   export default defineComponent({
     name: 'UserDropdown',

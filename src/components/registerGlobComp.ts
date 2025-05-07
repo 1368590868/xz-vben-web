@@ -4,12 +4,5 @@ import { Input, Layout, Select, AutoComplete, Switch, InputNumber } from 'ant-de
 
 export function registerGlobComp(app: App) {
   // app.use(Input).use(Button).use(Layout);
-  app
-    .use(Select)
-    .use(AutoComplete)
-    .use(InputNumber)
-    .use(Switch)
-    .use(Input)
-    .use(Button)
-    .use(Layout);
+  app.use(Select).use(AutoComplete).use(InputNumber).use(Switch).use(Input).use(Button).use(Layout);
 }

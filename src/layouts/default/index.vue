@@ -8,7 +8,7 @@
         <LayoutMultipleHeader />
         <LayoutContent />
         <LayoutFooter />
-        <SourceLink />
+        <!-- <SourceLink /> -->
       </Layout>
     </Layout>
   </Layout>

@@ -66,6 +66,7 @@
     right: 3px;
     bottom: 20px;
     z-index: 200;
+
     .fs-source-link {
       font-size: 12px;
       border-radius: 5px 0 0 5px;
@@ -76,6 +77,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+
       span,
       svg {
         cursor: pointer;

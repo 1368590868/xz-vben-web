@@ -1,4 +1,9 @@
-import { ExtendMsgRecipientSaveVO, ExtendMsgRecipientUpdateVO, ExtendMsgRecipientResultVO, ExtendMsgRecipientPageQuery } from './model/extendMsgRecipientModel';
+import {
+  ExtendMsgRecipientSaveVO,
+  ExtendMsgRecipientUpdateVO,
+  ExtendMsgRecipientResultVO,
+  ExtendMsgRecipientPageQuery,
+} from './model/extendMsgRecipientModel';
 import { PageParams, PageResult } from '/@/api/model/baseModel';
 import { defHttp } from '/@/utils/http/axios';
 import { RequestEnum } from '/@/enums/httpEnum';
@@ -42,7 +47,8 @@ export const Api = {
   } as AxiosRequestConfig,
 };
 
-export const copy = (id: string) => defHttp.request<ExtendMsgRecipientResultVO>({ ...Api.Copy, params: { id } });
+export const copy = (id: string) =>
+  defHttp.request<ExtendMsgRecipientResultVO>({ ...Api.Copy, params: { id } });
 
 export const page = (params: PageParams<ExtendMsgRecipientPageQuery>) =>
   defHttp.request<PageResult<ExtendMsgRecipientResultVO>>({ ...Api.Page, params });
@@ -50,12 +56,13 @@ export const page = (params: PageParams<ExtendMsgRecipientPageQuery>) =>
 export const detail = (id: string) =>
   defHttp.request<ExtendMsgRecipientResultVO>({ ...Api.Detail, params: { id } });
 
-export const query = (params: ExtendMsgRecipientPageQuery) => defHttp.request<ExtendMsgRecipientResultVO[]>({ ...Api.Query, params });
+export const query = (params: ExtendMsgRecipientPageQuery) =>
+  defHttp.request<ExtendMsgRecipientResultVO[]>({ ...Api.Query, params });
 
-export const save = (params: ExtendMsgRecipientSaveVO) => defHttp.request<ExtendMsgRecipientResultVO>({ ...Api.Save, params });
+export const save = (params: ExtendMsgRecipientSaveVO) =>
+  defHttp.request<ExtendMsgRecipientResultVO>({ ...Api.Save, params });
 
 export const update = (params: ExtendMsgRecipientUpdateVO) =>
   defHttp.request<ExtendMsgRecipientResultVO>({ ...Api.Update, params });
 
 export const remove = (params: string[]) => defHttp.request<boolean>({ ...Api.Delete, params });
-

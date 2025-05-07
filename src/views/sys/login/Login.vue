@@ -26,7 +26,10 @@
             <div class="mt-10 font-medium text-white -enter-x">
               <span class="inline-block mt-4 text-3xl"> {{ t('sys.login.signInTitle') }}</span>
             </div>
-            <div class="mt-5 font-normal text-white text-md dark:text-gray-500 -enter-x" style="color: yellow;">
+            <div
+              class="mt-5 font-normal text-white text-md dark:text-gray-500 -enter-x"
+              style="color: yellow"
+            >
               {{ t('sys.login.signInDesc') }} <br />
               账号： lamp <br />
               密码： lamp <br /><br />
