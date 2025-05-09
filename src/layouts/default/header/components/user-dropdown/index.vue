@@ -21,23 +21,8 @@
             :text="t('layout.header.dropdownProfile')"
             icon="ant-design:user-outlined"
           />
-          <MenuItem key="vben5demo" text="体验网址-vben5版" icon="ant-design:global-outlined" />
-          <MenuItem key="vben2demo" text="体验网址-vben2版" icon="ant-design:global-outlined" />
-          <MenuItem key="soybeandemo" text="体验网址-soybean版" icon="ant-design:global-outlined" />
-          <MenuDivider v-if="getShowDoc" />
-          <MenuItem
-            v-if="getShowDoc"
-            key="doc"
-            text="《灯灯》文档"
-            icon="ion:document-text-outline"
-          />
-          <MenuItem
-            v-if="getShowDoc"
-            key="vbenDoc"
-            icon="ion:document-text-outline"
-            text="《vben》文档"
-          />
-          <MenuDivider v-if="getShowDoc" />
+
+          <MenuDivider />
           <MenuItem
             v-if="getUseLockPage"
             key="lock"
