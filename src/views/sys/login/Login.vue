@@ -1,5 +1,5 @@
 <template>
-  <div :class="prefixCls" class="relative w-full h-full px-4">
+  <div :class="prefixCls" class="relative w-full h-full px-4 bg-[#F8FBFE]">
     <div class="flex items-center absolute right-4 top-4">
       <AppDarkModeToggle v-if="!sessionTimeout" class="enter-x mr-2" />
       <AppLocalePicker
@@ -23,7 +23,7 @@
               class="w-1/2 -mt-16 -enter-x"
               src="../../../assets/svg/login-box-bg.svg"
             />
-            <div class="mt-10 font-medium text-white -enter-x">
+            <!-- <div class="mt-10 font-medium text-white -enter-x">
               <span class="inline-block mt-4 text-3xl"> {{ t('sys.login.signInTitle') }}</span>
             </div>
             <div
@@ -36,7 +36,7 @@
               更多的账号以及他们拥有什么权限，请登录系统查看 <br />
               新建的用户 账号: 用户名、手机号、邮箱、身份证 <br />
               新建的用户 密码：123456
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="flex w-full h-full py-5 xl:h-auto xl:py-0 xl:my-0 xl:w-6/12">
@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="copyright" style="bottom: 0; position: absolute; margin: 0 auto; width: 100%">
+      <!-- <div class="copyright" style="bottom: 0; position: absolute; margin: 0 auto; width: 100%">
         <div style="padding: 20px 0">
           <a href="https://beian.miit.gov.cn" target="_blank">
             <img src="../../../assets/images/gongan.png" /><span>黔ICP备2021004749号</span>
@@ -76,7 +76,7 @@
             >
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

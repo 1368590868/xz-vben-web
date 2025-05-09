@@ -4,10 +4,10 @@
 -->
 <template>
   <div :class="getAppLogoClass" class="anticon" @click="goHome">
-    <img src="../../../assets/images/logo.png" />
-    <div v-show="showTitle" :class="getTitleClass" class="ml-2 truncate md:opacity-100">
+    <img src="../../../assets/images/logo.png" class="!w-[200px]" />
+    <!-- <div v-show="showTitle" :class="getTitleClass" class="ml-2 truncate md:opacity-100">
       {{ newTitle }}
-    </div>
+    </div> -->
   </div>
 </template>
 <script lang="ts" setup>

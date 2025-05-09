@@ -5,16 +5,17 @@
     ref="formRef"
     :model="formData"
     :rules="getFormRules"
-    class="p-4 enter-x"
+    class="p-4 enter-x mt-[-100px]"
     @keyup.enter="handleLogin"
+    layout="vertical"
   >
-    <FormItem name="grantType">
+    <FormItem name="grantType" class="h-0">
       <Input v-model:value="formData.grantType" :hidden="true" size="large" />
     </FormItem>
-    <FormItem name="key">
+    <FormItem name="key" class="h-0">
       <Input v-model:value="formData.key" :hidden="true" size="large" />
     </FormItem>
-    <FormItem class="enter-x" name="username">
+    <FormItem class="enter-x" name="username" label="账号">
       <Input
         v-model:value="formData.username"
         :placeholder="t('sys.login.userName')"
@@ -22,7 +23,7 @@
         size="large"
       />
     </FormItem>
-    <FormItem class="enter-x" name="password">
+    <FormItem class="enter-x" name="password" label="密码">
       <InputPassword
         v-model:value="formData.password"
         :placeholder="t('sys.login.password')"
@@ -33,8 +34,8 @@
     </FormItem>
 
     <ARow v-show="formState.showCaptcha" class="enter-x">
-      <ACol>
-        <FormItem class="code-input" name="code">
+      <ACol class="flex items-center">
+        <FormItem class="code-input" name="code" label="验证码">
           <Input
             v-model:value="formData.code"
             :placeholder="t('sys.login.captcha')"
@@ -60,14 +61,11 @@
       </ACol>
     </ARow>
 
-    <ARow class="enter-x">
+    <!-- <ARow class="enter-x">
       <ACol :span="24" style="color: red">
-        账号/密码：lamp/lamp，登录不上请
-        <a href="https://tangyh.top/vip/%E5%A6%82%E4%BD%95%E8%B5%9E%E5%8A%A9.html" target="_blank"
-          >联系作者</a
-        >
+        账号/密码：lamp/lamp
       </ACol>
-    </ARow>
+    </ARow> -->
     <ARow class="enter-x">
       <ACol :span="12">
         <FormItem>
@@ -95,7 +93,7 @@
         {{ t('sys.login.registerButton') }}
       </Button> -->
     </FormItem>
-    <ARow class="enter-x">
+    <!-- <ARow class="enter-x">
       <ACol :md="8" :xs="24">
         <Button block @click="setLoginState(LoginStateEnum.MOBILE)">
           {{ t('sys.login.mobileSignInFormTitle') }}
@@ -107,17 +105,17 @@
       <ACol :md="6" :xs="24">
         <Button block @click="setLoginState(LoginStateEnum.REGISTER)">手机注册</Button>
       </ACol>
-    </ARow>
+    </ARow> -->
 
-    <Divider class="enter-x">{{ t('sys.login.otherSignIn') }}</Divider>
+    <!-- <Divider class="enter-x">{{ t('sys.login.otherSignIn') }}</Divider> -->
 
-    <div :class="`${prefixCls}-sign-in-way`" class="flex justify-evenly enter-x">
+    <!-- <div :class="`${prefixCls}-sign-in-way`" class="flex justify-evenly enter-x">
       <GithubFilled />
       <WechatFilled />
       <AlipayCircleFilled />
       <GoogleCircleFilled />
       <TwitterCircleFilled />
-    </div>
+    </div> -->
   </Form>
 </template>
 <script lang="ts" setup>
